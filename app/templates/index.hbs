@@ -4,7 +4,9 @@
 
 <ul>
   {{#each model as |question|}}
-    <li class="list-group-item"> {{question.question}} by {{question.author}} | {{question.date}}</li>
+    <li class="list-group-item">
+      {{#link-to 'question' question.id}}{{question.question}} by {{question.author}} {{/link-to}}
+    </li>
   {{/each}}
 </ul>
 
